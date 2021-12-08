@@ -36,28 +36,6 @@ class TwitterStreamListener(tweepy.streaming.StreamListener):
                     del data[timevalue]
                     json.dump(data, open("PerMinute.json","w"), indent=6)
                     break
-            if len(data) > 0:
-                christmas_spirit_value = "|~|~|~|~|~|~|~|~|~|~|"
-                if len(data) > 10:
-                    christmas_spirit_value = "|█|~|~|~|~|~|~|~|~|~|"
-                    if len(data) > 20:
-                        christmas_spirit_value = "|█|█|~|~|~|~|~|~|~|~|"
-                        if len(data) > 30:
-                            christmas_spirit_value = "|█|█|█|~|~|~|~|~|~|~|"
-                            if len(data) > 40:
-                                christmas_spirit_value = "|█|█|█|█|~|~|~|~|~|~|"
-                                if len(data) > 50:
-                                    christmas_spirit_value = "|█|█|█|█|█|~|~|~|~|~|"
-                                    if len(data) > 60:
-                                        christmas_spirit_value = "|█|█|█|█|█|█|~|~|~|~|"
-                                        if len(data) > 70:
-                                            christmas_spirit_value = "|█|█|█|█|█|█|█|~|~|~|"
-                                            if len(data) > 80:
-                                                christmas_spirit_value = "|█|█|█|█|█|█|█|█|~|~|"
-                                                if len(data) > 90:
-                                                    christmas_spirit_value = "|█|█|█|█|█|█|█|█|█|~|"
-                                                    if len(data) > 100:
-                                                        christmas_spirit_value = "|█|█|█|█|█|█|█|█|█|█|"
             print("The number of tweets using the #Christmas per minute is " + str(len(data)))
             #print("This means that the christmas spririt is " + christmas_spirit_value )
         # lightning(pastHalfHour)
